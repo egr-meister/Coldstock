@@ -18,8 +18,8 @@ fun sortLabel(sort: InventoryUtils.ProductSort): String = when (sort) {
 @Composable
 fun SortSelector(
     selected: InventoryUtils.ProductSort,
-    onSelected: (InventoryUtils.ProductSort) -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onSelected: (InventoryUtils.ProductSort) -> Unit
 ) {
     DropdownField(
         label = "Sort by",
