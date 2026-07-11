@@ -1,0 +1,7 @@
+<resources>
+    <color name="ic_launcher_background">#3E718E</color>
+    <color name="splash_background">#E2F1F7</color>
+    <color name="frost_blue">#6FA8C5</color>
+    <color name="drawer_glass">#D3E5EC</color>
+    <color name="use_soon_amber">#D49A3B</color>
+</resources>

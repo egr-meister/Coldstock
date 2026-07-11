@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Cabinet body (within the 72x72 safe zone, roughly x:30..78 y:22..86) -->
+    <path
+        android:fillColor="#F7FBFC"
+        android:pathData="M32,22 h44 a4,4 0 0 1 4,4 v56 a4,4 0 0 1 -4,4 h-44 a4,4 0 0 1 -4,-4 v-56 a4,4 0 0 1 4,-4 z" />
+
+    <!-- Top drawer -->
+    <path android:fillColor="#D3E5EC"
+        android:pathData="M34,28 h40 v14 h-40 z" />
+    <path android:fillColor="#687A83"
+        android:pathData="M48,34 h12 v3 h-12 z" />
+
+    <!-- Middle drawer -->
+    <path android:fillColor="#D3E5EC"
+        android:pathData="M34,46 h40 v14 h-40 z" />
+    <path android:fillColor="#687A83"
+        android:pathData="M48,52 h12 v3 h-12 z" />
+
+    <!-- Bottom drawer, slightly open (offset + shadow gap) -->
+    <path android:fillColor="#5F8292"
+        android:pathData="M34,64 h40 v14 h-40 z" />
+    <path android:fillColor="#C7DEE7"
+        android:pathData="M30,66 h42 v12 h-42 z" />
+    <path android:fillColor="#687A83"
+        android:pathData="M45,71 h12 v3 h-12 z" />
+
+    <!-- Amber Use Soon tab on the middle drawer -->
+    <path android:fillColor="#D49A3B"
+        android:pathData="M69,47.5 h4 a1,1 0 0 1 1,1 v5 a1,1 0 0 1 -1,1 h-4 z" />
+</vector>
