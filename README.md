@@ -187,16 +187,16 @@ found", "Date unavailable", "Unassigned Drawer") and never crashes.
 ### Requirements
 
 - **JDK 17**
-- **Android SDK Platform 35** and **Build Tools 35.0.0**
-- `compileSdk = 35`, `targetSdk = 35`, `minSdk = 24`
-- Android Gradle Plugin 8.6.1, Kotlin 1.9.24, Gradle 8.9
+- **Android SDK Platform 36** and **Build Tools 36.0.0**
+- `compileSdk = 36`, `targetSdk = 36`, `minSdk = 24`
+- Android Gradle Plugin 8.9.1, Kotlin 1.9.24, Gradle 8.11.1
 
 ### Open in Android Studio
 
 1. Open the project root in Android Studio (Koala/Ladybug or newer).
 2. On first sync, Android Studio provisions the Gradle wrapper automatically.
    If you prefer the CLI and have Gradle installed, run once:
-   `gradle wrapper --gradle-version 8.9`
+   `gradle wrapper --gradle-version 8.11.1`
    (the `gradle-wrapper.jar` is intentionally not committed).
 3. Let Gradle sync, then Run.
 
@@ -294,7 +294,7 @@ Create the base64 secret with: `base64 -w0 coldstock-release-key.p12`.
 
 `.github/workflows/android-build.yml` runs on push to `main` and via
 `workflow_dispatch`. It checks out the repo, sets up JDK 17, installs Android SDK
-Platform 35 and Build Tools 35.0.0, restores the Gradle cache, generates the
+Platform 36 and Build Tools 36.0.0, restores the Gradle cache, generates the
 wrapper, decodes `ANDROID_KEYSTORE_BASE64` to a temporary PKCS12 file, exposes
 signing secrets only as environment variables, builds the signed release **APK**
 and **AAB**, locates the APK, runs `apksigner verify --print-certs`, **fails** if
