@@ -22,12 +22,15 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
-
-      - name: Install SDK Platform 36 and Build Tools 36.0.0
+      - name: Install Android SDK packages
         run: |
-          yes | sdkmanager "platforms;android-36" "build-tools;36.0.0" "platform-tools"
+          set -e
+          SDKMANAGER="$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager"
+          # Accept licenses explicitly, then install exactly what we need.
+          # Avoids the flaky auto-license behavior of setup-android on newer runners.
+          yes | "$SDKMANAGER" --licenses >/dev/null 2>&1 || true
+          "$SDKMANAGER" "platforms;android-36" "build-tools;36.0.0" "platform-tools"
+          echo "$ANDROID_HOME/platform-tools" >> "$GITHUB_PATH"
 
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
